@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'quizes/test.js' %}" defer></script>
+{% endblock scripts %}
+
+{% block title %}
+    {{obj.name}}
+    
+{% endblock title %}
+
+{% block content %}
+{{obj.name}}
+<div id="posts-box"></div>
+<div id="spinner-box"></div>
+<div id="loading-box">
+    <button class="btn btn-primary" id="load-btn">load more</button>
+</div>
+{% endblock content %}
